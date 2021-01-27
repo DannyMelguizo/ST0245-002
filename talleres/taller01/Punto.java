@@ -13,7 +13,8 @@ public class Punto {
      * Se inicializan los atributos de clase
      */
     public Punto(double x, double y) {
-
+        this.x = x;
+        this.y = y;
     }
 
     /**
@@ -21,8 +22,8 @@ public class Punto {
      *
      * @return eje coordenado x
      */
-    public double x() {
-
+    public double getX() {
+        return this.x;
     }
 
     /**
@@ -30,8 +31,8 @@ public class Punto {
      *
      * @return eje coordenado y
      */
-    public double y() {
-
+    public double getY() {
+        return this.y;
     }
 
     /**
@@ -44,7 +45,8 @@ public class Punto {
      */
     
     public double radioPolar() {
-
+        double radio = Math.sqrt(Math.pow(this.x,2) + Math.pow(this.y,2));
+        return radio;
     }
 
 
@@ -57,7 +59,7 @@ public class Punto {
      * @see <a href="http://mathworld.wolfram.com/PolarCoordinates.html"> Ver más <a/>
      */
     public double anguloPolar() {
-
+        return Math.atan(y/x);
     }
 
     /**
@@ -76,6 +78,9 @@ public class Punto {
      */
   
     public double distanciaEuclidiana(Punto otro) {
-        
+        double x2 = otro.x;
+        double y2 = otro.y;
+        double distancia = Math.sqrt(Math.pow((x2-x),2)+Math.pow((y2-y),2));
+        return distancia;
     }
 }
