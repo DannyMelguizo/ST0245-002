@@ -12,7 +12,7 @@ public class Taller2 {
      * @param p entrada 1 entero positivo, mayor que q
      * @param q entrada 2 entero positivo, menor que p
      *
-     * El método gcd tiene como objetivo ecnontrar el
+     * El método gcd tiene como objetivo encontrar el
      * máximo común divisor de dos números, por medio del
      * algoritmo de euclides
      * @see <a href="https://www.youtube.com/watch?v=Q9HjeFD62Uk"> Explicación </a>
@@ -39,7 +39,7 @@ public class Taller2 {
      */
     public static boolean SumaGrupo(int[] nums, int target) {
         return SumaGrupo(0, nums, target);
-    }	
+    }   
 
     /**
      * @param start entrada 1 entero positivo, determina un índice dentro del proceso
@@ -92,7 +92,12 @@ public class Taller2 {
      */
 
     private static void combinationsAux(String prefix, String s) {  
-        //...
+        if(s.length() == 0){
+            System.out.println(prefix);
+        } else{
+            combinationsAux(prefix + s.charAt(0), s.substring(1));
+            combinationsAux(prefix, s.substring(1));
+        }
     }
 
 }
