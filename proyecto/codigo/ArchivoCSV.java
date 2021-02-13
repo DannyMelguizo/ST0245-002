@@ -12,7 +12,7 @@ public class ArchivoCSV
              String nombreCarpeta = myObj.nextLine();
              System.out.println("Ingrese el nombre del archivo sin la extension");
              String nombreArchivo = myObj.nextLine();
-             br = new BufferedReader(new FileReader("./Archivos/" + nombreCarpeta + "/" + nombreArchivo + ".csv"));
+             br = new BufferedReader(new FileReader("./archivos_csv/" + nombreCarpeta + "/" + nombreArchivo + ".csv"));
              String line = br.readLine();
              while (null!=line) {
                 String datos = line;
