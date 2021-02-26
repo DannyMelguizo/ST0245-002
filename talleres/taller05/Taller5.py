@@ -15,6 +15,8 @@ def array_mult(array, num):
         array_new.append(i*num)
     return array_new
 
+#Derrick Sherrill. [Derrick Sherrill]. (2019, September 7). Insertion Sort Algorithm Explained (Full Code Included) [Archivo de video]
+#recuperado de https://www.youtube.com/watch?v=byHi41L9vTM&ab_channel=DerrickSherrill
 def insertion_sort(array):
     array_generator(array)
     longitud_array = range(1, len(array))
