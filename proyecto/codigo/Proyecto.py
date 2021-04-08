@@ -16,7 +16,7 @@ def leer_ganado_enfermo(documento_csv):
     print(ganado_enfermo)
     
     
-leer_ganado_enfermo(open('0.csv'))
+#leer_ganado_enfermo(open('0.csv'))
 
 def leer_ganado_sano(documento_csv):
     
@@ -24,7 +24,7 @@ def leer_ganado_sano(documento_csv):
 
     print(ganado_sano)
 
-leer_ganado_sano(open('01cowburps-promo-mediumSquareAt3X-v2.csv'))
+#leer_ganado_sano(open('01cowburps-promo-mediumSquareAt3X-v2.csv'))
     
 
 def compresion_imagenes_perdida(imagen_jpg):
@@ -35,7 +35,7 @@ def compresion_imagenes_perdida(imagen_jpg):
 
     im.save(file_name, optimize = True, quality= 10)
 
-compresion_imagenes_perdida('0.jpg')
+#compresion_imagenes_perdida('0.jpg')
     
 final = time()
 
