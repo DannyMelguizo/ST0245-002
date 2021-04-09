@@ -2,10 +2,6 @@ import numpy as np
 import pandas as pd
 from time import time
 from PIL import Image
-import PIL
-import os
-import glob
-
 
 inicio = time()
 
@@ -31,7 +27,6 @@ def compresion_imagenes_perdida(imagen_jpg):
 
     file_name = 'compressed_image.jpg'
     im = Image.open(imagen_jpg)
-    dim = im.size
 
     im.save(file_name, optimize = True, quality= 10)
 
