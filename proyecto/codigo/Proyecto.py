@@ -7,12 +7,12 @@ import shutil
 
 inicio = time()
 
-if not os.path.isdir("Compresion_imagenes"):
+if not os.path.isdir("Compresion_imagenes"): #Verificar si la carpeta donde se almacenaran los datos, ya existe
     
-    os.mkdir("Compresion_imagenes")
+    os.mkdir("Compresion_imagenes") #Crear una carpeta donde se almacenaran los datos
 
-    os.mkdir("Compresion_imagenes\\Ganado_enfermo")
-    os.mkdir("Compresion_imagenes\\Ganado_sano")
+    os.mkdir("Compresion_imagenes\\Ganado_enfermo") #Crear una carpeta donde se almacenaran los datos del ganado enfermo
+    os.mkdir("Compresion_imagenes\\Ganado_sano")    #Crear una carpeta donde se almacenaran los datos del ganado sano
     
 
 def leer_ganado_enfermo(documento_csv):
@@ -60,7 +60,7 @@ def compresion_imagenes_perdida(imagen_jpg, tipo_ganado):
     
         
 
-compresion_imagenes_perdida('0.jpg','Ganado_enfermo')
+#compresion_imagenes_perdida('0.jpg','Ganado_enfermo')
     
 final = time()
 
