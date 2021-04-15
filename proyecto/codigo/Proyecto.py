@@ -37,29 +37,21 @@ def compresion_imagenes_perdida(imagen_jpg, tipo_ganado):
 
     tipo_ganado = tipo_ganado.lower()
     
-    file_name = None
-
+    file_name = str(imagen_jpg) + "_compressed.jpg"
+    im = Image.open(imagen_jpg)
+    #dim = im.size()
     if tipo_ganado == "ganado_sano":
-        file_name = str(imagen_jpg) + "_compressed.jpg"
-        im = Image.open(imagen_jpg)
-        #dim = im.size()
         im.save(file_name, optimize = True, quality= 10)
         shutil.move(file_name, 'Compresion_imagenes\\Ganado_sano')
     
     elif tipo_ganado == "ganado_enfermo":
-        file_name = str(imagen_jpg) + "_compressed.jpg"
-        im = Image.open(imagen_jpg)
-        #dim = im.size()
         im.save(file_name, optimize = True, quality= 10)
         shutil.move(file_name, 'Compresion_imagenes\\Ganado_enfermo')
     
     else:
-        
-        return 'Por favor intentelo de nuevo e introduzca un tipo de ganado válido.'
+        print('Por favor intentelo de nuevo e introduzca un tipo de ganado válido.')
+        return False
     
-    
-        
-
 #compresion_imagenes_perdida('0.jpg','Ganado_enfermo')
     
 final = time()
